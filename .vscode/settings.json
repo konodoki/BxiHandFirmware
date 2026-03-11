@@ -19,5 +19,6 @@
   "idf.flashType": "UART",
   "python-envs.defaultEnvManager": "ms-python.python:conda",
   "python-envs.defaultPackageManager": "ms-python.python:conda",
-  "python-envs.pythonProjects": []
+  "python-envs.pythonProjects": [],
+  "idf.currentSetup": "/home/kkkk/esp/v5.5.2/esp-idf"
 }

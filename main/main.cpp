@@ -1,7 +1,38 @@
-/*
- * SPDX-FileCopyrightText: 2010-2022 Espressif Systems (Shanghai) CO LTD
- *
- * SPDX-License-Identifier: CC0-1.0
+/*** 
+ * @                       _oo0oo_
+ * @                      o8888888o
+ * @                      88" . "88
+ * @                      (| -_- |)
+ * @                      0\  =  /0
+ * @                    ___/`---'\___
+ * @                  .' \\|     |// '.
+ * @                 / \\|||  :  |||// \
+ * @                / _||||| -:- |||||- \
+ * @               |   | \\\  - /// |   |
+ * @               | \_|  ''\---/''  |_/ |
+ * @               \  .-\__  '-'  ___/-. /
+ * @             ___'. .'  /--.--\  `. .'___
+ * @          ."" '<  `.___\_<|>_/___.' >' "".
+ * @         | | :  `- \`.;`\ _ /`;.`/ - ` : | |
+ * @         \  \ `_.   \_ __\ /__ _/   .-` /  /
+ * @     =====`-.____`.___ \_____/___.-`___.-'=====
+ * @                       `=---='
+ * @
+ * @
+ * @     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * @
+ * @           佛祖保佑     永不宕机     永无BUG
+ */
+
+/*** 
+ * @Author: konodoki 1326898804@qq.com
+ * @Date: 2026-02-01 18:07:02
+ * @LastEditors: konodoki 1326898804@qq.com
+ * @LastEditTime: 2026-02-09 13:16:23
+ * @FilePath: /bxi_hand/main/main.cpp
+ * @Description: 
+ * @
+ * @Copyright (c) 2026 by konodoki , All Rights Reserved. 
  */
 #include "HLSCL.h"
 #include <cstddef>

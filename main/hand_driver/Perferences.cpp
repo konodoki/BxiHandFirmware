@@ -1,3 +1,13 @@
+/*** 
+ * @Author: konodoki 1326898804@qq.com
+ * @Date: 2026-02-02 12:32:33
+ * @LastEditors: konodoki 1326898804@qq.com
+ * @LastEditTime: 2026-02-09 13:16:51
+ * @FilePath: /bxi_hand/main/hand_driver/Perferences.cpp
+ * @Description: 
+ * @
+ * @Copyright (c) 2026 by konodoki , All Rights Reserved. 
+ */
 #include"Perferences.h"
 #include "esp_err.h"
 #include "esp_log.h"

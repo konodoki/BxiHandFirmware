@@ -1,3 +1,13 @@
+/*** 
+ * @Author: konodoki 1326898804@qq.com
+ * @Date: 2026-02-02 15:09:20
+ * @LastEditors: konodoki 1326898804@qq.com
+ * @LastEditTime: 2026-02-09 13:16:43
+ * @FilePath: /bxi_hand/main/FakeSerial.h
+ * @Description: 
+ * @
+ * @Copyright (c) 2026 by konodoki , All Rights Reserved. 
+ */
 #ifndef USB_SERIAL_H
 #define USB_SERIAL_H
 #include "freertos/idf_additions.h"

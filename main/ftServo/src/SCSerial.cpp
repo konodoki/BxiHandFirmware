@@ -1,3 +1,13 @@
+/*** 
+ * @Author: konodoki 1326898804@qq.com
+ * @Date: 2026-02-02 11:24:18
+ * @LastEditors: konodoki 1326898804@qq.com
+ * @LastEditTime: 2026-02-09 13:17:00
+ * @FilePath: /bxi_hand/main/ftServo/src/SCSerial.cpp
+ * @Description: 
+ * @
+ * @Copyright (c) 2026 by konodoki , All Rights Reserved. 
+ */
 /*
  * SCSerial.h
  * 飞特串行舵机硬件接口层程序
@@ -54,12 +64,12 @@ SCSerial::SCSerial(u8 End, u8 Level)
 
 int SCSerial::readSCS(unsigned char *nDat, int nLen, unsigned long TimeOut)
 {
-    return uart_read_bytes(UART_NUM_1, nDat, nLen, 10);
+    return uart_read_bytes(UART_NUM_1, nDat, nLen, 100);
 }
 
 int SCSerial::readSCS(unsigned char *nDat, int nLen)
 {
-    return uart_read_bytes(UART_NUM_1, nDat, nLen, 10);
+    return uart_read_bytes(UART_NUM_1, nDat, nLen, 100);
 }
 
 int SCSerial::writeSCS(unsigned char *nDat, int nLen)

@@ -366,7 +366,7 @@ void sendAllState(void *)
             usb_serial_jtag_write_bytes(u.bytes, sizeof(JointStateSerialPack),
                                         0);
         }
-        vTaskDelay(20);
+        vTaskDelay(10);
     }
 }
 // ----- Task - Sync Read running always on Core 1 -----
