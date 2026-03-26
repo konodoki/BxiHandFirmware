@@ -36,9 +36,9 @@ void FakeSerialpushDataToBuf(uint8_t *data, uint32_t len)
     if (len <= 0)
         return;
     // 如果发太快，缓冲区满了就放弃旧包
-    if (rx_buffer.size() < RINGBUF_SIZE) {
+    if (rx_buffer.size()+len < RINGBUF_SIZE) {
         rx_buffer.insert(rx_buffer.end(), data, data + len);
-        ESP_LOGI("ble", "receive %lu", len);
+        // ESP_LOGI("ble", "receive %lu", len);
     }
 }
 
@@ -79,7 +79,12 @@ void process_pack(void *)
                     CRC::Calculate(u.bytes, PACK_SIZE - 1, CRC8_Table);
                 if (u.pack.CRC == crc) {
                     // 校验通过，发送队列
-                    xQueueSendToBack(pack_queue, &u.pack, 0);
+                    if (xQueueSendToBack(pack_queue, &u.pack, 0) ==
+                        errQUEUE_FULL) {
+                        RxSerialPack dummy;
+                        xQueueReceive(pack_queue, &dummy, 0);
+                        xQueueSendToBack(pack_queue, &u.pack, 0);
+                    }
                     // 从缓冲区移除这完整的一帧
                     rx_buffer.erase(rx_buffer.begin(),
                                     rx_buffer.begin() + PACK_SIZE);

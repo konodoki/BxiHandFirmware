@@ -343,12 +343,12 @@ void zero_all_motors()
         xSemaphoreTake(gBusMux, portMAX_DELAY);
 
     // ---- 拇指三轴：串行归零 ----
-    zero_with_current(0, sd[0].servo_direction, 960); // 拇指外展
-    zero_with_current(1, sd[1].servo_direction, 960); // 拇指屈曲
-    zero_with_current(2, sd[2].servo_direction, 960); // 拇指肌腱
+    zero_with_current(0, sd[0].servo_direction, 800); // 拇指外展
+    zero_with_current(1, sd[1].servo_direction, 800); // 拇指屈曲
+    zero_with_current(2, sd[2].servo_direction, 800); // 拇指肌腱
 
     // ---- 四指：并行归零（索引 3~6，共 4 个舵机）----
-    zero_fingers_parallel_with_current(3, 4, 960);
+    zero_fingers_parallel_with_current(3, 4, 800);
 
     // ---- 归零完成后，驱动全部关节到伸展姿态 ----
     hlscl.WritePosEx(SERVO_IDS[0], sd[0].extend_count, 2400, 0,

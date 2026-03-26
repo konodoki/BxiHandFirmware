@@ -17,8 +17,8 @@
   #error "Do not define both BXI_HAND_V1 and BXI_HAND_V2."
 #endif
 
-#define LEFT_HAND
-// #define RIGHT_HAND
+// #define LEFT_HAND
+#define RIGHT_HAND
 
 #if !defined(LEFT_HAND) && !defined(RIGHT_HAND)
   #error "Define exactly one: LEFT_HAND or RIGHT_HAND (build flag or uncomment in HandConfig.h)."

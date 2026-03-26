@@ -1,12 +1,12 @@
-/*** 
+/***
  * @Author: konodoki 1326898804@qq.com
  * @Date: 2026-02-02 11:24:18
  * @LastEditors: konodoki 1326898804@qq.com
- * @LastEditTime: 2026-02-09 13:17:00
+ * @LastEditTime: 2026-03-26 17:28:41
  * @FilePath: /bxi_hand/main/ftServo/src/SCSerial.cpp
- * @Description: 
+ * @Description:
  * @
- * @Copyright (c) 2026 by konodoki , All Rights Reserved. 
+ * @Copyright (c) 2026 by konodoki , All Rights Reserved.
  */
 /*
  * SCSerial.h
@@ -14,7 +14,7 @@
  * 日期: 2024.4.2
  * 作者:
  */
-
+#include "HandConfig.h"
 #include "SCSerial.h"
 #include "esp_log.h"
 #include "hal/uart_types.h"
@@ -38,7 +38,11 @@ void init_uart()
         .rx_flow_ctrl_thresh = 0,
     };
     ESP_ERROR_CHECK(uart_param_config(UART_NUM_1, &uart_config));
+#if defined(BXI_HAND_V1)
     ESP_ERROR_CHECK(uart_set_pin(UART_NUM_1, 3, 2, -1, -1));
+#elif defined(BXI_HAND_V2)
+    ESP_ERROR_CHECK(uart_set_pin(UART_NUM_1, 8, 7, -1, -1));
+#endif
     ESP_LOGI("SCSerial", "Uart init!");
 }
 }

@@ -47,7 +47,7 @@ static const uint8_t SET_TOR = 0x32;
 // ---- Defaults for SyncWritePosEx ----
 static uint16_t g_speed[7] = { 32766, 32766, 32766, 32766, 32766, 32766, 32766 };
 static uint8_t g_accel[7] = { 0, 0, 0, 0, 0, 0, 0 }; // 0..255
-static uint16_t g_torque[7] = { 700, 700, 700, 700, 700, 700, 700 }; // 0....1000
+static uint16_t g_torque[7] = { 800, 800, 800, 800, 800, 800, 800 }; // 0....1000
 static const uint16_t HOLD_MAG = 5; // the minimal torque actually commanded to
                                     // the motors during the torque mode. Any
                                     // torque below that will not be used.
@@ -56,7 +56,7 @@ static const uint16_t HOLD_MAG = 5; // the minimal torque actually commanded to
 static int16_t g_lastTorqueCmd[7] = { 0 };
 
 // ---- Thermal torque limiting (GLOBAL PARAMETERS) ----
-static uint8_t TEMP_CUTOFF_C = 50; // °C cutoff
+static uint8_t TEMP_CUTOFF_C = 80; // °C cutoff
 static uint16_t HOT_TORQUE_LIMIT = 200; // clamp torque when motor exceeds
                                         // TEMP_CUTOFF_C
 

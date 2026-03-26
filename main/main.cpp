@@ -76,7 +76,7 @@ void app_main(void)
     printf("Minimum free heap size: %" PRIu32 " bytes\n",
            esp_get_minimum_free_heap_size());
     bxi_ble_init();
-    // 注意手的初始化必须在蓝牙后面
+    // // 注意手的初始化必须在蓝牙后面
     HandSetUp();
 }
 }
